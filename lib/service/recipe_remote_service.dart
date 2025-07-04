@@ -8,7 +8,7 @@ class RecipeRemoteService {
     final url = "https://dummyjson.com/recipes/1";
     final response = await _client.get(Uri.parse(url));
     if(response.statusCode == 200){
-      print("Success");
+      print("Successful");
       final jsonString = response.body;
       final recipeResponseModel = RecipeResponseModel.fromJsonString(jsonString);
       print(recipeResponseModel.ingredients);
